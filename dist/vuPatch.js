@@ -8,9 +8,11 @@
 (function($) {
 
     var timerForResize; 
-
-    $.vuPatch = function( passHeight, passWidth ) {
+    var resizeDelay = 500;
+    
+    $.vuPatch = function( passHeight, passWidth, passDelay ) {
       var viewportHeight, viewportWidth;
+      if(passDelay) { resizeDelay = passDelay; }
       if(!passHeight) { viewportHeight = $(window).height(); } else { viewportHeight = passHeight; }
       if(!passWidth) { viewportWidth = $(window).width(); } else { viewportWidth = passWidth; }
       var oneVH = viewportHeight / 100, oneVW = viewportWidth / 100;
@@ -31,7 +33,7 @@
 
     $(window).resize(function() {
         clearTimeout(timerForResize);
-        timerForResize = setTimeout($.vuPatch($(window).height(),$(window).width()), 500);
+        timerForResize = setTimeout($.vuPatch($(window).height(),$(window).width()), resizeDelay);
     });
     
 })(jQuery);
