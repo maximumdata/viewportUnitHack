@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>VU Patch Demo</title>
+    <link rel="stylesheet" href="demo.css">
+</head>
+<body>
+    <div id="menu" data-vh="20" data-vw="80"></div>
+    <div id="box" data-vh="30" data-vw="30"></div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="../dist/vuPatch.min.js"></script>
+    <script>
+        $.vuPatch($(window).height(), $(window).width());
+    </script>
+</body>
+</html>
