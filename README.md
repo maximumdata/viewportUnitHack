@@ -7,13 +7,15 @@ The result is this library.
 
 ## Usage
 Use a conditional tag to only load the scripts on older versions of IE
-```<!--[if lte IE 8]>
+```
+<!--[if lte IE 8]>
 <script src="/js/jQuery-1.x.x.js"></script>
 <script src="/js/vuPatch.js"></script>
 <script>
 $.vuPatch($(window).height(), $(window).width());
 </script>
-<![endif]-->```
+<![endif]-->
+```
 Then, structure elements that you want to scale to viewport units (vh or vw in CSS3) with the data types of `data-vh=` and `data-vw=`.
 
 ## Disclaimer
