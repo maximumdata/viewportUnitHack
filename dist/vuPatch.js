@@ -16,17 +16,15 @@
       if(!passHeight) { viewportHeight = $(window).height(); } else { viewportHeight = passHeight; }
       if(!passWidth) { viewportWidth = $(window).width(); } else { viewportWidth = passWidth; }
       var oneVH = viewportHeight / 100, oneVW = viewportWidth / 100;
-      $('body').children().each(function() {
-        if( $(this).data("vh") || $(this).data("vw") ) {
-          var thisVH = $(this).data("vh"), thisVW = $(this).data("vw");
-          if(thisVH) {
-            var newVH = oneVH * thisVH;
-            $(this).css("height", newVH);
-          }
-          if(thisVW) {
-            var newVW = oneVW * thisVW;
-            $(this).css("width", newVW);
-          }
+      $('[data-vw], [data-vh]').each(function() {
+        var $this = $(this), thisVH = $this.data("vh"), thisVW = $this.data("vw");
+        if(thisVH) {
+          var newVH = oneVH * thisVH;
+          $this.css("height", newVH);
+        }
+        if(thisVW) {
+          var newVW = oneVW * thisVW;
+          $this.css("width", newVW);
         }
       });
     };
