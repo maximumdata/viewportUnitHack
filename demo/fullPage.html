@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>full page scrolling demo</title>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+</head>
+<body>
+    <style>
+        body {
+          margin: 0; }
+        
+        #up {
+          position: fixed;
+          width: 100%;
+          text-align: center;
+          cursor: pointer;
+          color: white;
+          font-size: 3em;
+          top: 10px; }
+        
+        #down {
+          position: fixed;
+          width: 100%;
+          text-align: center;
+          cursor: pointer;
+          color: white;
+          font-size: 3em;
+          bottom: 10px; }
+        
+        section:nth-child(odd) {
+          background: red; }
+        
+        section:nth-child(even) {
+          background: orange; }
+        
+        h1 {
+          text-align: center; 
+          margin: 0;
+          padding: 150px 0;}
+    </style>
+    <div class="arrow" id="up">&#x25B2;</div>
+    <div class="arrow" id="down">&#x25BC;</div>
+    
+    <section data-vh="100"><h1 data-vh="20">click the arrows to navigate between each fullscreen section</h1></section>
+    <section data-vh="100"></section>
+    <section data-vh="100"></section>
+    <section data-vh="100"></section>
+    <section data-vh="100"></section>
+    
+    <script src="../dist/vuPatch.min.js"></script>
+    <script>
+        $.vuPatch(500);
+        $('.arrow').click(function(){
+            var move;
+            if($(this).is('#up')) {
+                move = $(window).scrollTop() - $(window).height();
+            }
+            else {
+                move = $(window).scrollTop() + $(window).height();
+            }
+            $('html, body').animate({scrollTop: move}, 750);
+        });
+        $(window).on('scroll touchmove mousewheel', function(e){
+            e.preventDefault();
+            e.stopPropagation();
+            return false;
+        });
+    </script>
+</body>
+</html>
