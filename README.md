@@ -12,13 +12,16 @@ Use a conditional tag to only load the scripts on older versions of IE
 <script src="/js/jQuery-1.x.x.js"></script>
 <script src="/js/vuPatch.js"></script>
 <script>
-$.vuPatch($(window).height(), $(window).width(), 500);
+    $.vuPatch(500);
 </script>
 <![endif]-->
 ```
 Then, structure elements that you want to scale to viewport units (vh or vw in CSS3) with the data types of `data-vh=` and `data-vw=`.
-
-The 500 at the end of the function initializer is the delay you would like to set for the resizing event. By default the delay is 500 milliseconds, I wouldn't recommend setting it lower than 250.
+```
+<div data-vh="50" data-vw="30"></div>
+<div data-vw="75"></div>
+```
+The `500` in the function initializer is the delay you would like to set for the resizing event. By default the delay is 500 milliseconds, and that will be used if you do not specify a number. I wouldn't recommend setting it lower than 250.
 
 ## Disclaimer
 

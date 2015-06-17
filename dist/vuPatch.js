@@ -10,11 +10,9 @@
     var timerForResize; 
     var resizeDelay = 500;
     
-    $.vuPatch = function( passHeight, passWidth, passDelay ) {
-      var viewportHeight, viewportWidth;
+    $.vuPatch = function( passDelay ) {
+      var viewportHeight = $(window).height(), viewportWidth = $(window).width();
       if(passDelay) { resizeDelay = passDelay; }
-      if(!passHeight) { viewportHeight = $(window).height(); } else { viewportHeight = passHeight; }
-      if(!passWidth) { viewportWidth = $(window).width(); } else { viewportWidth = passWidth; }
       var oneVH = viewportHeight / 100, oneVW = viewportWidth / 100;
       $('[data-vw], [data-vh]').each(function() {
         var $this = $(this), thisVH = $this.data("vh"), thisVW = $this.data("vw");
@@ -31,7 +29,7 @@
 
     $(window).resize(function() {
         clearTimeout(timerForResize);
-        timerForResize = setTimeout($.vuPatch($(window).height(),$(window).width()), resizeDelay);
+        timerForResize = setTimeout($.vuPatch(resizeDelay), resizeDelay);
     });
     
 })(jQuery);
