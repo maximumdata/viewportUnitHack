@@ -23,6 +23,8 @@ Then, structure elements that you want to scale to viewport units (vh or vw in C
 ```
 The `500` in the function initializer is the delay you would like to set for the resizing event. By default the delay is 500 milliseconds, and that will be used if you do not specify a number. I wouldn't recommend setting it lower than 250.
 
+Check `demo/index.html` for a basic example. In `fullPage.html` you'll see an example of how to use this to make a page behave as fullscreen slides.
+
 ## Disclaimer
 
 I know that this is not very performant in it's current state. This library should be used sparingly, and shouldn't be relied upon to style every element on your pages. Stick with a few specific elements, or larger containers.
