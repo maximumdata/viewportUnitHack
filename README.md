@@ -25,7 +25,7 @@ The `500` in the function initializer is the delay you would like to set for the
 
 ## Disclaimer
 
-I know that this is not very performant in it's current state. 
+I know that this is not very performant in it's current state. This library should be used sparingly, and shouldn't be relied upon to style every element on your pages. Stick with a few specific elements, or larger containers.
 
 This project started as a "Can I actually do that?", turned into "Wow this is possible but incredibly poorly implemented" and has now turned into "I bet I can make this useful and performant".
 
