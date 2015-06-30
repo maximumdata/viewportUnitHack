@@ -38,6 +38,10 @@
               break;
             case "width":
               $this.css("width", newVMax);
+              break;
+            case "both":
+              $this.css("width", newVMax);
+              $this.css("height", newVMax);
           }
         }
         if ( thisVMin ) {
@@ -49,6 +53,10 @@
               break;
             case "width":
               $this.css("width", newVMin);
+              break;
+            case "both":
+              $this.css("width", newVMin);
+              $this.css("height", newVMin);
           }
         }
       });

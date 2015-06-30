@@ -28,11 +28,11 @@ Or, if you're targeting any of the browsers shown [here](http://caniuse.com/#fea
 ```
 The `500` in the function initializer is the delay you would like to set for the resizing event. By default the delay is 500 milliseconds, and that will be used if you do not specify a number. I wouldn't recommend setting it lower than 250.
 ### New! vmin & vmax!
-Now supports `data-vmax` and `data-vmin`. If you don't specify a `data-vmin-for` or `data-vmax-for`, the library will default to assigning the calculated value to height. Valid values for `data-vmin-for` and `data-vmax-for` are `"width"` and `"height"`.
+Now supports `data-vmax` and `data-vmin`. If you don't specify a `data-vmin-for` or `data-vmax-for`, the library will default to assigning the calculated value to height. Valid values for `data-vmin-for` and `data-vmax-for` are `"width"`, `"height"`, or `"both"`.
 ```
 <div data-vh="50" data-vw="30"></div>
 <div data-vw="75"></div>
-<div data-vmin="20" data-vmin-for="width"></div>
+<div data-vmin="20" data-vmin-for="both"></div>
 <div data-vmax="40" data-vmax-for="width" data-vmin="50" data-vmin-for="height"></div>
 ```
 
