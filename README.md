@@ -1,5 +1,5 @@
 # viewportUnitPatch
-Dirty jquery hack to use viewport units on any browser that can run jquery. This should include IE6+.
+A library to use viewport units on any browser that can run jQuery. This should include IE6+.
 
 Viewport units are a godsend to front end devs. However, they are not fully supported across the spectrum of end user browsers. I'm trying to find a way to make that happen. 
 
