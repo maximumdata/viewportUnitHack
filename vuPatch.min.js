@@ -1,7 +1,7 @@
 /*
  * Mike Dettmer
- * http://mikedettmer.com
- * Viewport Unit Patch -- a very ugly way to use viewport units, accomplished with custom data types and jQuery.
+ * http://mikedettmer.com/projects/viewportunitpatch/
+ * Viewport Unit Patch -- a plugin to backport support for viewport units to everything that can run jQuery.
  * GPL v2 licensed
  */
 
