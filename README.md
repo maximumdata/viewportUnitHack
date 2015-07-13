@@ -42,6 +42,4 @@ For a more in-depth look at this library, including how it operates and when it'
 ### Disclaimer
 This library should be used sparingly, and shouldn't be relied upon to style every element on your pages. Stick with a few specific elements, or larger containers.
 
-This project started as a "Can I actually do that?", turned into "Wow this is possible but incredibly poorly implemented" and has now turned into "I bet I can make this useful and performant".
-
 If you have any ideas on how to improve this library, please open an issue or send a pull request!
