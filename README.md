@@ -38,7 +38,7 @@ Now supports `data-vmax` and `data-vmin`. If you don't specify a `data-vmin-for`
 ## Demo
 Check [here](http://mikedettmer.com/demo/vuPatch/) for a basic example, go ahead and resize the window. Check [here](http://mikedettmer.com/demo/vuPatch/fullPage.html) for an example of how to use this to make a page behave as a set of fullscreen slides.
 
-For a more in-depth look at this library, including how it operates and when it's appropriate to use, check [my blog](http://mikedettmer.com/projects/viewportunitpatch/).
+For a more in-depth look at this library, including how it operates and when it's appropriate to use, check [my blog](http://mikedettmer.com/viewportunitpatch/).
 ### Disclaimer
 This library should be used sparingly, and shouldn't be relied upon to style every element on your pages. Stick with a few specific elements, or larger containers.
 
